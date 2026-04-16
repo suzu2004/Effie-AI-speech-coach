@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Effie Results</title>
+</head>
+<body>
+
+  <h1>Results</h1>
+
+  <p id="transcript"></p>
+
+  <script>
+    const data = localStorage.getItem("effieTranscript");
+    document.getElementById("transcript").innerText = data;
+  </script>
+
+</body>
+</html>

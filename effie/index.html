@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Effie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="bg"></div>
+  <div class="overlay"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <span>Effie</span>
+      <img src="assets/icon.png" alt="logo">
+    </div>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#spin">Spin</a></li>
+      <li><a href="#transcript">Transcript</a></li>
+      <li><a href="#results">Results</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- About Section -->
+    <section id="about" class="glass">
+      <h1>Effie</h1>
+      <p>
+        Improve your speaking skills with real-time AI feedback. 
+        Practice topics, track your performance, and become confident.
+      </p>
+      <div class="hero-actions">
+      <button onclick="document.getElementById('spin').scrollIntoView()">
+       Start Practicing
+       </button>
+
+          <button class="secondary">
+          See Demo
+            </button>
+        </div>
+    </section>
+
+    <!-- Spin Section -->
+    <section id="spin" class="glass">
+     <h2> Topic Generator </h2>
+
+  <div class="wheel-container">
+    <div class="pointer"></div>
+
+    <div class="wheel" id="wheel">
+      <div class="center-btn" onclick="spinWheel()">SPIN</div>
+    </div>
+  </div>
+
+  <!-- Manual Settings -->
+  <div class="controls">
+    <input id="customTopics" placeholder="Enter topics (comma separated)">
+    <input id="customTime" type="number" placeholder="Time in seconds (e.g. 60)">
+  </div>
+
+  <!-- Topic Card -->
+  <div id="topicCard" class="topic-card hidden">
+    <h3 id="selectedTopic"></h3>
+
+    <button onclick="startSession()">Start Speaking</button>
+  </div>
+
+</section>
+    <!-- Transcript -->
+    <section id="transcript" class="glass">
+      <h2>📄 Transcript</h2>
+      <p id="output"></p>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="glass">
+      <h2>📊 Results</h2>
+      <p id="resultsText"></p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+  <div id="topicModal" class="modal hidden">
+  <div class="modal-content">
+    <h2 id="selectedTopic">Your Topic</h2>
+    
+    <button onclick="startSession()">Start Speaking</button>
+  </div>
+</div>
+</body>
+</html>
