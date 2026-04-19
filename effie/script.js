@@ -184,12 +184,7 @@ function startSession() {
   startSpeech();
   startCustomTimer();
 }
-function startSession() {
-  document.getElementById("topicCard").classList.add("hidden");
 
-  startSpeech();
-  startCustomTimer();
-}
 
 function startCustomTimer() {
   let timeLeft = sessionTime;
